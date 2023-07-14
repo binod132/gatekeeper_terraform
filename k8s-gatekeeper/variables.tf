@@ -13,5 +13,5 @@ variable "helm_release_name" {
 variable "cluster_name"{
   description = "name of cluster"
   type = string
-  default = "gitaction"
+  default = "minikube"
 }
