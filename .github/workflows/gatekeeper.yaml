@@ -41,3 +41,6 @@ jobs:
     - name: list constraints
       run: |
         kubectl get constraints
+    - name: Verify policy bad example
+      run: |
+        kubectl apply -f ${path.root}/mainfest/bad_pod_limit.yaml
