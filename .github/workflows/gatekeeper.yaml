@@ -1,6 +1,8 @@
 name: CI
+
 on:
-  - binod
+  push:
+    branches: [binod]
 jobs:
   job1:
     runs-on: ubuntu-latest
