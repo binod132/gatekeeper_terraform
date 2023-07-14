@@ -6,19 +6,18 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./k8s-gatekeeper
     name: build example and deploy to minikube
     steps:
     - uses: actions/checkout@v3
     - uses: hashicorp/setup-terraform@v2
     - name: Start minikube
       uses: medyagh/setup-minikube@master
-    - name: OPA gatekeeper
-      run:
-        working-directory: ./k8s-gatekeeper
     - name: Terraform Init
       id: init
       run: terraform init
-
+      
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
