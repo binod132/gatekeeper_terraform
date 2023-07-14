@@ -35,3 +35,9 @@ jobs:
     - name: check pods
       run: |
         kubectl get pods -n gatekeeper-system
+    - name: list contrainttemplates
+      run: |
+        kubectl get ConstraintTemplate
+    - name: list constraints
+      run: |
+        kubectl get constraints
