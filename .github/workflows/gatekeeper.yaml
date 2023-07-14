@@ -31,3 +31,7 @@ jobs:
       timeout-minutes: 30
       id: apply
       run: terraform apply -auto-approve
+
+    - name: check pods
+      run: |
+        kubectl get pods -n gatekeeper-system
