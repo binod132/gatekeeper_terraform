@@ -13,7 +13,6 @@ jobs:
     - name: Start minikube
       uses: medyagh/setup-minikube@master
     - name: OPA gatekeeper
-      defaults:
       run:
         working-directory: ./k8s-gatekeeper
     - name: Terraform Init
