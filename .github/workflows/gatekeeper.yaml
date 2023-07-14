@@ -6,9 +6,9 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./k8s-gatekeeper
-    name: build example and deploy to minikube
+    defaults:
+      run:
+        working-directory: ./k8s-gatekeeper
     steps:
     - uses: actions/checkout@v3
     - uses: hashicorp/setup-terraform@v2
