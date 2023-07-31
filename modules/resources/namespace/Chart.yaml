@@ -1,4 +1,4 @@
 apiVersion: v2
-name: helmdeployment
-description: A Helm to deploy namespace
-version: 0.0.10
+name: namespace_template
+version: 0.0.3
+appVersion: 0.0.1
