@@ -5,6 +5,7 @@ items:
   kind: ResourceQuota
   metadata:
     name: pods-high
+    namespace: {{.Values.name_namespace}}
   spec:
     hard:
       cpu: "1000"
@@ -19,6 +20,7 @@ items:
   kind: ResourceQuota
   metadata:
     name: pods-medium
+    namespace: {{.Values.name_namespace}}
   spec:
     hard:
       cpu: "10"
@@ -33,6 +35,7 @@ items:
   kind: ResourceQuota
   metadata:
     name: pods-low
+    namespace: {{.Values.name_namespace}}
   spec:
     hard:
       cpu: "5"
