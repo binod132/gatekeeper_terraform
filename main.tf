@@ -1,3 +1,3 @@
-module "namespace" {
+resource "namespace" {
     source = ".//modules/namespace" 
 }
