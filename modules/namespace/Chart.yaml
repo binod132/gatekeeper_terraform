@@ -1,0 +1,4 @@
+apiVersion: v2
+name: helmdeployment
+description: A Helm to deploy namespace
+version: 0.0.10
