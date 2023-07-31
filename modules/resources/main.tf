@@ -1,6 +1,6 @@
-resource "helm_release" "namespace-template" {
+resource "helm_release" "resource-template" {
   chart     = ".//modules/resources/namespace"
-  name      = "namespace-template"
+  name      = "resource-template"
 #   namespace = var.namespace
 #   version   = "0.0.3"
 

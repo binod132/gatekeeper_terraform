@@ -1,4 +1,4 @@
 apiVersion: v2
-name: namespace-template
+name: resource-template
 version: 0.0.3
 appVersion: 0.0.1

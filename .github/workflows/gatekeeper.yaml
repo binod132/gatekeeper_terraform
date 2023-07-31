@@ -35,6 +35,12 @@ jobs:
     - name: check namespace
       run: |
         kubectl get namespace
+    
+    - name: check resource quota
+      run: |
+        kubectl describe quota
+
+      
 
     # - name: check pods
     #   run: |
