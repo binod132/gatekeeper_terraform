@@ -40,6 +40,13 @@ jobs:
       run: |
         kubectl describe quota --namespace feature-namespace
 
+    - name: check pod liveness
+      run: |
+        kubectl describe pod liveness-http
+
+    - name: check Network Policy
+      run: |
+        kubectl get networkpolicy --namespace feature-namespace
       
 
     # - name: check pods
