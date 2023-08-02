@@ -47,6 +47,14 @@ jobs:
     - name: check Network Policy
       run: |
         kubectl get networkpolicy --namespace feature-namespace
+    
+    - name: check ClusterRole
+      run: |
+        kubectl get clusterrole
+    
+    - name: check Roles
+      run: |
+        kubectl get role --namespace feature-namespace
       
 
     # - name: check pods
