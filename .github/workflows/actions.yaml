@@ -4,6 +4,7 @@ on:
   push:
     branches: [master]
 
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   #TF_ACTION_WORKING_DIR: 'k8s-gatekeeper'

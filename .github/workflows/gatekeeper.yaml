@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [binod]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./
+    steps:
+    - uses: actions/checkout@v3
+    - uses: hashicorp/setup-terraform@v2
+    - name: Start minikube
+      uses: medyagh/setup-minikube@master
+    - name: Terraform Init
+      id: init
+      run: terraform init
+      
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
+      continue-on-error: false
+      
+    - name: Terraform Apply
+      timeout-minutes: 30
+      id: apply
+      run: terraform apply -auto-approve
+    
+    - name: check namespace
+      run: |
+        kubectl get namespace
+    
+    - name: check resource quota
+      run: |
+        kubectl describe quota --namespace feature-namespace
+
+    - name: check pod liveness
+      run: |
+        kubectl describe pod liveness-http
+
+    - name: check Network Policy
+      run: |
+        kubectl get networkpolicy --namespace feature-namespace
+    
+    - name: check ClusterRole
+      run: |
+        kubectl get clusterrole
+    
+    - name: check Roles
+      run: |
+        kubectl get role --namespace feature-namespace
+      
+
+    # - name: check pods
+    #   run: |
+    #     kubectl get pods -n gatekeeper-system
+    # - name: list contrainttemplates
+    #   run: |
+    #     kubectl get ConstraintTemplate
+    # - name: list constraints
+    #   run: |
+    #     kubectl get constraints
+    # - name: Verify limit policy bad example
+    #   if: always()
+    #   run: |
+    #     kubectl apply -f ./mainfest/bad_pod_limit.yaml
+
+    # - name: Verify allowed repo policy bad example
+    #   if: always()
+    #   run: |
+    #     kubectl apply -f ./mainfest/bad_allowed_repo.yaml

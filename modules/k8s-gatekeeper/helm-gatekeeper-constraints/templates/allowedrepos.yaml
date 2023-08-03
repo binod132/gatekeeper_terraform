@@ -1,11 +1,14 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sAlwaysDeny
+kind: K8sAllowedRepos
 metadata:
-  name: pod-always-deny
+  name: repo-is-openpolicyagent
 spec:
   match:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
+    namespaces:
+      - "default"
   parameters:
-    message: "You are restricted to Create Pods"
+    repos:
+      - "openpolicyagent/"

@@ -1,12 +1,12 @@
 apiVersion: templates.gatekeeper.sh/v1
 kind: ConstraintTemplate
 metadata:
-  name: k8scontainerlimits
+  name: k8scontainerlimits2
 spec:
   crd:
     spec:
       names:
-        kind: K8sContainerLimits
+        kind: K8sContainerLimits2
       validation:
         # Schema for the `parameters` field
         openAPIV3Schema:
