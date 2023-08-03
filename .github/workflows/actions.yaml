@@ -2,7 +2,8 @@ name: Deploy Infrastructure
 
 on:
   push:
-    branches: [xyz]
+    branches: [master]
+
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
