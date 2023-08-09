@@ -1,5 +1,5 @@
 module "namespace" {
-    source = ".//modules/resources" 
+    source = ".//modules/namespace" 
 }
 
 module "k8s-gatekeeper" {
