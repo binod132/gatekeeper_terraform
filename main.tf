@@ -1,5 +1,8 @@
 module "namespace" {
     source = ".//modules/namespace" 
+    values = [templatefile("values.yaml", {
+    name_namespace= "binod"
+    })]
 }
 
 module "liveness"{

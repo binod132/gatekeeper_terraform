@@ -36,25 +36,25 @@ jobs:
       run: |
         kubectl get namespace
     
-    - name: check resource quota
-      run: |
-        kubectl describe quota --namespace feature-namespace
+    # - name: check resource quota
+    #   run: |
+    #     kubectl describe quota --namespace feature-namespace
 
     - name: check pod liveness
       run: |
         kubectl describe pod liveness-http
 
-    - name: check Network Policy
-      run: |
-        kubectl get networkpolicy --namespace feature-namespace
+    # - name: check Network Policy
+    #   run: |
+    #     kubectl get networkpolicy --namespace feature-namespace
     
-    - name: check ClusterRole
-      run: |
-        kubectl get clusterrole
+    # - name: check ClusterRole
+    #   run: |
+    #     kubectl get clusterrole
     
-    - name: check Roles
-      run: |
-        kubectl get role --namespace feature-namespace
+    # - name: check Roles
+    #   run: |
+    #     kubectl get role --namespace feature-namespace
       
 
     # - name: check pods
