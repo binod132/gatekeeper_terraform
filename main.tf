@@ -1,8 +1,6 @@
 module "namespace" {
-    source = ".//modules/namespace" 
-values = [
-    templatefile(".//modules/namespace", {name_namespace = "${var.env}"})
-  ]
+    source = ".//modules/namespace"
+    name_namespace = var.name_namespace
 }
 
 module "liveness"{
