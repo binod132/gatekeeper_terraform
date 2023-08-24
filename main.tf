@@ -1,6 +1,7 @@
 module "namespace" {
     source = ".//modules/namespace"
     name_namespace = var.name_namespace
+    lable_namespace = var.lable_namespace
 }
 
 module "liveness"{
