@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: "${name_namespace}"
   labels:
-    name: "${label_namespace}"
+    name: "${lable_namespace}"
