@@ -1,4 +1,4 @@
-variable "name-namespace"{
+variable "name_namespace"{
     description= "Name of namespace"
     type = string
     default = "sandbox"
