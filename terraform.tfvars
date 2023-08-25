@@ -1,2 +1,2 @@
-name_namespace= "binodadk"
-lable_namespace= "lableofnamespace"
+name-namespace= "binodadk"
+lable-namespace= "lableofnamespace"

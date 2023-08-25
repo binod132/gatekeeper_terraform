@@ -1,11 +1,11 @@
-variable "name_namespace" {
+variable "name-namespace" {
   description = "Name of namespace"
   type        = string
-  default     = "check-namespace"
+  default     = "checknamespace"
 }
 
-variable "lable_namespace" {
+variable "lable-namespace" {
   description = "Name of namespace"
   type        = string
-  default     = "lable-namespace"
+  default     = "lablenamespace"
 }
