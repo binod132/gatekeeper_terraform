@@ -5,6 +5,11 @@ resource "helm_release" "namespace-template" {
     name  = "name_namespace"  # A key in the Helm chart's values.yaml
     value = var.name_namespace
     }
+
+  set {
+    name  = "name_namespace"  # A key in the Helm chart's values.yaml
+    value = var.label_namespace
+    }  
   #  values = [
   #    templatefile(".//modules/namespace/helm-namespace/values.yaml", {name-namespace = "${var.name-namespace}"})
   #  ]
