@@ -5,7 +5,7 @@ variable "name-namespace"{
 }
 
 variable "lable-namespace"{
-    description= "Name of namespace"
+    description= "Name of lable"
     type = string
-    default = "sandbox"
+    default = "sandboxlable"
 }
