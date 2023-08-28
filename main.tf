@@ -1,6 +1,6 @@
 module "namespace" {
     source = ".//modules/namespace"
-      name-namespace= var.name-namespace
+    name-namespace= var.name-namespace
     lable-namespace= var.lable-namespace
 }
 
