@@ -7,7 +7,7 @@ resource "helm_release" "namespace-template" {
     }
 
   set {
-    name  = "name_namespace"  # A key in the Helm chart's values.yaml
+    name  = "label_namespace"  # A key in the Helm chart's values.yaml
     value = var.label_namespace
     }  
   #  values = [
