@@ -42,7 +42,13 @@ jobs:
 
     - name: check pod liveness
       run: |
-        kubectl describe pod liveness-http
+        kubectl describe pod liveness-exec
+    - name: Sleep for 30 seconds
+      run: sleep 30s
+      shell: bash
+    - name: check pod liveness
+      run: |
+        kubectl describe pod liveness-exec
 
     # - name: check Network Policy
     #   run: |
