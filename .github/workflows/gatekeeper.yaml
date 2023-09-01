@@ -49,6 +49,9 @@ jobs:
     - name: check pod liveness
       run: |
         kubectl describe pod nginx
+    - name: check quota
+      run: |
+        kubectl describe quota
 
 
 
