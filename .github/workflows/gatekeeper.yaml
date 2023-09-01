@@ -49,6 +49,12 @@ jobs:
     - name: check pod liveness
       run: |
         kubectl describe pod nginx
+    - name: Sleep for 10 minute
+      run: sleep 600s
+    - name: check pod liveness
+      run: |
+        kubectl describe pod nginx
+
 
     # - name: check Network Policy
     #   run: |
