@@ -48,7 +48,7 @@ jobs:
       shell: bash
     - name: check pod liveness
       run: |
-        kubectl describe pod liveness-exec
+        kubectl describe pod nginx
 
     # - name: check Network Policy
     #   run: |
