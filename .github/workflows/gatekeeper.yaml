@@ -42,7 +42,7 @@ jobs:
 
     - name: check pod liveness
       run: |
-        kubectl describe pod liveness-exec
+        kubectl describe pod nginx
     - name: Sleep for 30 seconds
       run: sleep 30s
       shell: bash
