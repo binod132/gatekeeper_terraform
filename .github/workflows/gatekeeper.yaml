@@ -51,7 +51,7 @@ jobs:
         kubectl describe pod nginx
     - name: check quota
       run: |
-        kubectl describe quota
+        kubectl get quota
 
 
 
