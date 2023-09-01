@@ -8,6 +8,10 @@ spec:
     image: nginx:1.14.2
     ports:
     - containerPort: 80
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30;
     livenessProbe:
       exec:
         command:
