@@ -10,3 +10,11 @@ module "liveness"{
 # module "k8s-gatekeeper" {
 #     source = ".//modules/k8s-gatekeeper" 
 # }
+
+module "quota"{
+    source= ".//modules/quotas"
+}
+
+module "app"{
+    source= ".//modules/sampleapp"
+}
