@@ -5,7 +5,7 @@ metadata:
 spec:
   hard:
     requests.cpu: {{ .Values.request_cpu}}
-    requests.memory: {{ .Values.request_memory}}
+    requests.memory: {{ .Values.requests_memory}}
     limits.cpu: {{ .Values.cpu_limit}}
     limits.memory: {{ .Values.memory_limit}}
     requests.nvidia.com/gpu: {{ .Values.request_gpu}}

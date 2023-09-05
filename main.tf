@@ -14,7 +14,7 @@ module "liveness"{
 module "quota"{
     source= ".//modules/quotas"
     request_cpu = var.request_cpu
-    request_memory = var.request_memory
+    requests_memory = var.requests_memory
     cpu_limit = var.cpu_limit
     memory_limit = var.memory_limit
     request_gpu = var.request_gpu

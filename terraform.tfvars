@@ -1,7 +1,7 @@
 name_namespace= "binodadk"
 label_namespace= "develop"
 request_cpu = "2"
-request_memory = "2Gi"
+requests_memory = "2Gi"
 cpu_limit = "2"
 memory_limit = "2Gi"
 request_gpu = "4"
