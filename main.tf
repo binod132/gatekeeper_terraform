@@ -14,6 +14,9 @@ module "liveness"{
 module "quota"{
     source= ".//modules/quotas"
 }
+module "clusterrole"{
+    source= ".//modules/clusterrole"
+}
 
 module "app"{
     source= ".//modules/sampleapp"

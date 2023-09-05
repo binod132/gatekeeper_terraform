@@ -4,11 +4,11 @@ metadata:
   name: compute-resources
 spec:
   hard:
-    requests.cpu: "1"
-    requests.memory: 1Gi
-    limits.cpu: "2"
-    limits.memory: 2Gi
-    requests.nvidia.com/gpu: 4
+    requests.cpu: {{ .Values.request_cpu}}
+    requests.memory: {{ .Values.request_memory}}
+    limits.cpu: {{ .Values.cpu_limit}}
+    limits.memory: {{ .Values.memory_limit}}
+    requests.nvidia.com/gpu: {{ .Values.request_gpu}}
 ---
 apiVersion: v1
 kind: ResourceQuota
@@ -16,10 +16,10 @@ metadata:
   name: object-counts
 spec:
   hard:
-    configmaps: "10"
-    persistentvolumeclaims: "4"
-    pods: "4"
-    replicationcontrollers: "20"
-    secrets: "10"
-    services: "10"
-    services.loadbalancers: "2"
+    configmaps: {{ .Values.configmaps_quota}
+    persistentvolumeclaims: {{ .Values.persistentvolumeclaims}}
+    pods: {{ .Values.pods}}
+    replicationcontrollers: {{ .Values.replicationcontrollers}}
+    secrets: {{ .Values.secrets}}
+    services: {{ .Values.services}}
+    services.loadbalancers: {{ .Values.services_loadbalancers}}

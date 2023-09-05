@@ -52,6 +52,9 @@ jobs:
     - name: check quota
       run: |
         kubectl get quota
+    - name: check cluster role
+      run: |
+        kubectl get clusterroles
 
 
 
