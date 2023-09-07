@@ -5,10 +5,10 @@ metadata:
 spec:
   hard:
     requests.cpu: {{ .Values.request_cpu}}
-    requests.memory: 1Gi
+    requests.memory: {{ .Values.requests_memory}}
     limits.cpu: {{ .Values.cpu_limit}}
-    limits.memory: 2Gi
-    requests.nvidia.com/gpu: 4
+    limits.memory: {{ .Values.memory_limit}}
+    requests.nvidia.com/gpu: {{ .Values.request_gpu}}
 ---
 apiVersion: v1
 kind: ResourceQuota
