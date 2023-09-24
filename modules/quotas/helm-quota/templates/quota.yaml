@@ -16,7 +16,7 @@ metadata:
   name: object-counts
 spec:
   hard:
-    configmaps: {{ .Values.configmaps_quota}
+    configmaps: {{ .Values.configmaps_quota}}
     persistentvolumeclaims: {{ .Values.persistentvolumeclaims}}
     pods: {{ .Values.pods}}
     replicationcontrollers: {{ .Values.replicationcontrollers}}
