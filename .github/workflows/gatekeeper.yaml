@@ -59,6 +59,9 @@ jobs:
       uses: cloudposse/github-action-terratest@main
       with:
         sourceDir: test
+    - name: run terrtest test file
+      run: |
+        go test -v -timeout 30m
 
 
 
