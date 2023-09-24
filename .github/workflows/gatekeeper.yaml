@@ -55,10 +55,10 @@ jobs:
     - name: check cluster role
       run: |
         kubectl get clusterroles
-            - name: Run Terratest
-          uses: cloudposse/github-action-terratest@main
-          with:
-            sourceDir: test
+    - name: Run Terratest
+      uses: cloudposse/github-action-terratest@main
+      with:
+        sourceDir: test
 
 
 
