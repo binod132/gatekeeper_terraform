@@ -60,6 +60,7 @@ jobs:
       with:
         sourceDir: test
     - name: run terrtest test file
+      working-directory: test
       run: |
         go test -v -timeout 30m
 
